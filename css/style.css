@@ -1,0 +1,458 @@
+
+body {
+    font-family: 'Press Start 2P', cursive;
+    background:url("https://res.cloudinary.com/dlqib2xyi/image/upload/v1531450803/Doggo%20card%20resources/canvas1.png") no-repeat;
+    background-size:cover;
+    overflow:hidden;
+    animation:canvas 3s infinite step-start;
+  }
+  @keyframes canvas {
+    50% { background:url("https://res.cloudinary.com/dlqib2xyi/image/upload/v1531450803/Doggo%20card%20resources/canvas2.png") no-repeat;
+      background-size:cover;
+    }
+    100% {
+      background:url("https://res.cloudinary.com/dlqib2xyi/image/upload/v1531450803/Doggo%20card%20resources/canvas1.png") no-repeat;
+      background-size:cover;
+    }
+  }
+  /* DOG ANIMATION*/
+  .doggy {
+    display:block;
+    transform:translateX(-540px);
+    width:561px;
+    height:331px;
+    background-color:red;
+    background: url("https://res.cloudinary.com/dlqib2xyi/image/upload/v1531264608/Doggo%20card%20resources/dog2.png");
+    animation: doggy .2s steps(1) infinite, forward 30s steps(300) infinite;
+  }
+  @keyframes doggy {
+    50% {background: url("https://res.cloudinary.com/dlqib2xyi/image/upload/v1531264608/Doggo%20card%20resources/dog1.png");
+    }
+    100% 
+      {background: url("https://res.cloudinary.com/dlqib2xyi/image/upload/v1531264608/Doggo%20card%20resources/dog2.png")}
+    
+  }
+  @keyframes forward {
+    0% {transform: translateX(-540x)}
+  
+    100% {transform: translateX(20000px)}
+  }
+  
+  .doggyhat {
+    background:url("https://res.cloudinary.com/dlqib2xyi/image/upload/v1531446366/Doggo%20card%20resources/doggopartyhat.png") no-repeat;
+    animation: forward 30s steps(300) infinite;
+  }
+  /*HEADER*/
+  .header {
+    cursor: pointer;
+    font-family: 'Press Start 2P', cursive;
+    font-size:1.6em;
+    width: 90vw;
+    max-width:550px;
+    height:50%;
+    display:block;
+    margin-right:auto;
+    margin-left:auto;
+    background-color:black;
+    color:white;
+    border-radius:15px;
+    margin-bottom:20px;
+  }
+  div .header {
+    margin-top:10px;
+    margin-bottom:1px;
+  }
+  
+  .animation {
+    border:4px solid;
+    animation: headborder 1s infinite steps(3);
+  }
+  @keyframes headborder {
+    0% {border-color: blue }
+    30% { border-color: yellow }
+    40% { border-color: red }
+    50% { border-color: purple }
+    60% { border-color: yellow }
+    100% { border-color: green }
+  }
+  
+  .topheight {
+    height:20vh;
+  }
+  .bottomheight {
+    height:80vh;
+  }
+  /*PLAYING CARD AREA*/
+  .playingcontainer {
+    display:flex;
+    justify-content:start;
+    overflow-x:scroll;
+    overflow-y:visible;
+  }
+  .card {
+    perspective:800px;
+    transform-style: preserve-3d;
+    position:relative;
+    min-width:250px;
+    height:350px;
+    cursor: pointer;
+    transition:.2s;
+  }
+  
+  .leaderboardfilter {
+    display:flex;
+    justify-content:space-around;
+    height:50%;
+  }
+  .leaderboardfilter .header {
+    font-size:.4em;
+    max-width:270px;
+    height:30px;
+    margin:0;
+  }
+  
+  @media screen and (min-width: 600px)  {
+    .playingcontainer {
+      justify-content:space-around;
+    }
+    .header {
+      font-size:3em;
+    }
+    .card {
+      min-width:325px;
+      height:455px;
+    }
+    .leaderboard .carousel .carousel-cell {
+      margin-right:50px;
+    }
+    .leaderboardfilter .header {
+      font-size:1em;
+      max-width:270px;
+      height:60px;
+      margin:auto;
+    }
+  
+  }
+  @media screen and (min-width: 768px)  {
+    .playingcontainer {
+      justify-content:space-around;
+    }
+    .header {
+      font-size:3em;
+    }
+    .card {
+      min-width:325px;
+      height:455px;
+    }
+    .leaderboard .carousel .carousel-cell {
+      margin-right:50px;
+    }
+    .leaderboardfilter .header {
+      font-size:1em;
+      max-width:270px;
+      height:60px;
+      margin:auto;
+    }
+  }
+  @media screen and (min-width: 900px)  {
+    .playingcontainer {
+      justify-content:space-around;
+    }
+    .header {
+      font-size:3em;
+    }
+    .card {
+      min-width:400px;
+      height:560px;
+    }
+    .leaderboard .carousel .carousel-cell {
+      margin-right:95px;
+    }
+  }
+  /* @media screen and (min-width: 1200px)  {
+  .playingcontainer {
+  justify-content:space-around;
+  }
+  .header {
+  font-size:3em;
+  }
+  .card {
+  min-width:500px;
+  height:700px;
+  }
+  }
+  @media screen and (min-width: 1800px)  {
+  .playingcontainer {
+  justify-content:space-around;
+  }
+  .header {
+  font-size:3em;
+  }
+  .card {
+  min-width:500px;
+  height:700px;
+  }
+  } */
+  
+  
+  
+  
+  .side-positioning { 
+    backface-visibility: hidden;
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+  }
+  .front {
+    border:20px solid;
+    box-sizing:border-box;
+  }
+  .back {
+    box-sizing:border-box;
+    border-radius:25px;
+    border:20px solid;
+    transform: rotateY(-180deg);
+  }
+  .doggo-container {
+    margin:0 auto;
+    height:66%;
+    width:96%;
+    text-align:right;
+  }
+  .doggo {
+    width:100%;
+    height:100%;
+    overflow:hidden;
+  }
+  .doggo img {
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center 30%;
+  }
+  
+  .elo {
+    overflow:visible;
+    backface-visibility: hidden;
+    display:inline-block;
+    position:relative;
+    font-size:.8em;
+    top:-12px;
+    left:-4px;
+    padding:8px;
+    color:white;
+  }
+  .cardinfo {
+    font-size:1vw;
+    margin-top:10%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  /*LEADERBOARD*/
+  .leaderboard {
+  
+  }
+  
+  .carousel {
+    margin:auto auto;
+  }
+  
+  .leaderboard .carousel-cell {
+    margin-right:10px;
+  }
+  
+  /* .leaderboard carousel-cell {
+  width: 300px;
+  height: 400px;
+  counter-increment: gallery-cell;
+  }
+  */
+  
+  /* TRANSITION CLASSES */
+  .fadeOut {
+    transition:1s ease;
+    opacity:0;
+  }
+  .twirl-animation {
+    animation: twirl 3s;
+  }
+  .fade-animation {
+    animation: godown .8s;
+  }
+  @keyframes twirl {
+    100% {
+      transform: rotateY(-1800deg);
+    }
+  }
+  @keyframes godown {
+    100% {
+      opacity:0;
+    }
+  }
+  /* h1 doggo animation */
+  .header span {
+    position:relative;
+    display:inline-block;
+    animation:3s span1 infinite step-start;
+  }
+  @keyframes span1 {
+    0% { top: 0 }
+    30% { top: -6px }
+    100% { top: 0 }
+  }
+  .header span:nth-of-type(2) {
+    animation:7s span2 infinite step-start;
+  }
+  @keyframes span2 {
+    0% { top: 0 }
+    30% { top: -2px }
+    100% { top: 0 }
+  }
+  .header span:nth-of-type(3) {
+    animation:2s span3 infinite step-start;
+  }
+  @keyframes span3 {
+    0% { top: 0 }
+    30% { top: -4px }
+    100% { top: 0 }
+  }
+  .header span:nth-of-type(4) {
+    animation:6s span4 infinite step-start;
+  }
+  @keyframes span4 {
+    0% { top: 0 }
+    30% { top: -5px }
+    100% { top: 0 }
+  }
+  /* card styles*/
+  
+  .front.red {
+    background:url("https://res.cloudinary.com/dlqib2xyi/image/upload/v1531015054/Doggo%20card%20resources/red_background.png");
+    background-repeat:no-repeat;
+    background-size:cover;
+    border-image: url("https://res.cloudinary.com/dlqib2xyi/image/upload/v1530988841/Doggo%20card%20resources/red_border.png") 20;
+  }
+  .front.red .elo {
+    background-color:red;
+  }
+  .front.red + .back {
+    background-color: red;
+    border-color:red;
+  }
+  .front.blue {
+    border-image: url("https://res.cloudinary.com/dlqib2xyi/image/upload/v1530989520/Doggo%20card%20resources/blue_border.png") 20;
+    background:url("https://res.cloudinary.com/dlqib2xyi/image/upload/v1531079424/Doggo%20card%20resources/blue_background.png");
+    background-repeat:no-repeat;
+    background-size:cover;
+  }
+  .front.blue .elo {
+    background-color:blue;
+  }
+  .front.blue + .back {
+    background-color: blue;
+    border-color:blue;
+  }
+  .front.purple {
+    border-image: url("https://res.cloudinary.com/dlqib2xyi/image/upload/v1530989520/Doggo%20card%20resources/purple_border.png") 20;
+    background:url("https://res.cloudinary.com/dlqib2xyi/image/upload/v1531015608/Doggo%20card%20resources/purple_background.png");
+    background-repeat:no-repeat;
+    background-size:cover;
+  }
+  .front.purple .elo {
+    background-color:purple;
+  }
+  .front.purple + .back {
+    background-color: purple;
+    border-color:purple;
+  }
+  
+  .front.green {
+    border-image: url("https://res.cloudinary.com/dlqib2xyi/image/upload/v1530989520/Doggo%20card%20resources/green_border.png") 20;
+    background:url("https://res.cloudinary.com/dlqib2xyi/image/upload/v1531079347/Doggo%20card%20resources/green_background.png");
+    background-repeat:no-repeat;
+    background-size:cover;
+  }
+  .front.green .elo {
+    background-color:green;
+  }
+  .front.green + .back {
+    background-color: green;
+    border-color:green;
+  } 
+  
+  .front.orange {
+    border-image: url("https://res.cloudinary.com/dlqib2xyi/image/upload/v1530989520/Doggo%20card%20resources/orange_border.png") 20;
+    background:url("https://res.cloudinary.com/dlqib2xyi/image/upload/v1531079347/Doggo%20card%20resources/orange_background.png");
+    background-repeat:no-repeat;
+    background-size:cover;
+  }
+  .front.orange .elo {
+    background-color: orange;
+  }
+  .front.orange + .back {
+    background-color: orange;
+    border-color: orange;
+  }
+  
+  .front.aqua {
+    border-image: url("https://res.cloudinary.com/dlqib2xyi/image/upload/v1530989520/Doggo%20card%20resources/aqua_border.png") 20;
+    background:url("https://res.cloudinary.com/dlqib2xyi/image/upload/v1531079347/Doggo%20card%20resources/aqua_background.png");
+    background-repeat:no-repeat;
+    background-size:cover;
+  }
+  .front.aqua .elo {
+    background-color:aqua;
+  }
+  .front.aqua + .back {
+    background-color: aqua;
+    border-color:aqua;
+  }
+  
+  .front.pink {
+    border-image: url("https://res.cloudinary.com/dlqib2xyi/image/upload/v1530989520/Doggo%20card%20resources/pink_border.png") 20;
+    background:url("https://res.cloudinary.com/dlqib2xyi/image/upload/v1531079347/Doggo%20card%20resources/pink_background.png");
+    background-repeat:no-repeat;
+    background-size:cover;
+  }
+  .front.pink .elo {
+    background-color:pink;
+  }
+  .front.pink + .back {
+    background-color: pink;
+    border-color:pink;
+  }
+  
+  .front.darkgreen {
+    border-image: url("https://res.cloudinary.com/dlqib2xyi/image/upload/v1530989520/Doggo%20card%20resources/dark_green_border.png") 20;
+    background:url("https://res.cloudinary.com/dlqib2xyi/image/upload/v1531079347/Doggo%20card%20resources/dgreen_background.png");
+    background-repeat:no-repeat;
+    background-size:cover;
+  }
+  
+  .front.darkgreen .elo {
+    background-color: darkgreen;
+  }
+  .front.darkgreen + .back {
+    background-color: darkgreen;
+    border-color: darkgreen;
+  }
+  
+  .front.yellow {
+    border-image: url("https://res.cloudinary.com/dlqib2xyi/image/upload/v1531185554/Doggo%20card%20resources/yellow_border.png") 20;
+    background:url("https://res.cloudinary.com/dlqib2xyi/image/upload/v1531079347/Doggo%20card%20resources/yellow_background.png");
+    background-repeat:no-repeat;
+    background-size:cover;
+  }
+  
+  .front.yellow .elo {
+    background-color: yellow;
+  }
+  .front.yellow + .back {
+    background-color: yellow;
+    border-color: yellow;
+  }
+  
+  .rainbow {
+    border-image: url("https://res.cloudinary.com/dlqib2xyi/image/upload/v1530811909/Doggo%20card%20resources/rainbow_card_border.png") 38;
+  }
